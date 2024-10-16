@@ -23,6 +23,7 @@ export const ProductButtons = ({ className, style }: ProductButtonsProps) => {
                 <button
                     className={styles.buttonAdd}
                     onClick={() => increaseBy(1)}
+                    // onClick={onChange}
                 >+</button>
         </div>
     )
