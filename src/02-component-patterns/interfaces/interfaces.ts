@@ -1,4 +1,3 @@
-import { ReactElement } from "react"
 import { Props as ProductCardProps } from "../components/ProductCard"
 import { ProductButtonsProps } from "../components/ProductButtons"
 import { ProductTitleProps } from "../components/ProductTitle"
@@ -25,5 +24,9 @@ export interface ProductCardHOCProps {
 
 export interface onChangeArgs {
     product: Product,
+    count: number
+}
+
+export interface ProductInCart extends Product {
     count: number
 }
