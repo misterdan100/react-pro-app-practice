@@ -20,3 +20,18 @@ const object2 = {
 const { ['2']: toDelete, ['1']: toDelete2, ...rest} = object2
 const objectFiltered = rest
 console.log(objectFiltered)
+
+export const formatData = (date) => {
+    return new Date(date).toLocaleDateString('es-ES', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    })
+}
+
+export const formatPrice = (price) => {
+    return new Intl.NumberFormat('en-US',{
+        style: 'currency',
+        currency: 'USD'
+    }).format(price)
+}
