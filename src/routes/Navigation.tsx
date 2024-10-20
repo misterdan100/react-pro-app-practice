@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
   
   import logo from '../logo.svg';
-import ShoppingPage from '../02-component-patterns/pages/ShoppingPage';
+// import ShoppingPage from '../02-component-patterns/pages/ShoppingPage';
   
   export const Navigation = () => {
     return (
@@ -29,7 +29,7 @@ import ShoppingPage from '../02-component-patterns/pages/ShoppingPage';
           <Routes>
             <Route path="/about"  />
             <Route path="/users" />
-            <Route path="/" element={<ShoppingPage />}/>
+            <Route path="/" element={<p>Hola mister</p>}/>
           </Routes>
         </div>
       </BrowserRouter>
