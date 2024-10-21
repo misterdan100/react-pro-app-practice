@@ -6,6 +6,9 @@ import {
 } from 'react-router-dom';
   
   import logo from '../logo.svg';
+import RegisterPage from '../03-forms/pages/RegisterPage';
+import { FormikBasicPage } from '../03-forms/pages/FormikBasicPage';
+import { FormikYupPage } from '../03-forms/pages/FormikYupPage';
 // import ShoppingPage from '../02-component-patterns/pages/ShoppingPage';
   
   export const Navigation = () => {
@@ -16,10 +19,10 @@ import {
               <img src={ logo } alt="React Logo" />
             <ul>
               <li>
-                <NavLink to="/" className={({isActive}) => (`${isActive ? 'nav-active' : ''}`)}>Shopping</NavLink>
+                <NavLink to="/formik-yup" className={({isActive}) => (`${isActive ? 'nav-active' : ''}`)}>Formik Yup</NavLink>
               </li>
               <li>
-                <NavLink to="/about" className={({isActive}) => (`${isActive ? 'nav-active' : ''}`)}>About</NavLink>
+                <NavLink to="/formik-basic" className={({isActive}) => (`${isActive ? 'nav-active' : ''}`)}>Formik Basic</NavLink>
               </li>
               <li>
                 <NavLink to="/users" className={({isActive}) => (`${isActive ? 'nav-active' : ''}`)} >Users</NavLink>
@@ -27,9 +30,10 @@ import {
             </ul>
           </nav>
           <Routes>
-            <Route path="/about"  />
-            <Route path="/users" />
-            <Route path="/" element={<p>Hola mister</p>}/>
+            <Route path="/formik-yup" element={<FormikYupPage />} />
+            <Route path="/formik-basic" element={<FormikBasicPage />} />
+            <Route path="/register" element={<RegisterPage />}/>
+            <Route path="/" element={<RegisterPage />}/>
           </Routes>
         </div>
       </BrowserRouter>
