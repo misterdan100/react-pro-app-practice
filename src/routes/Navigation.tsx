@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
   
   import logo from '../logo.svg';
-import ShoppingPage from '../02-component-patterns/pages/ShoppingPage';
+import RegisterPage from '../03-forms/RegisterPage';
   
   export const Navigation = () => {
     return (
@@ -24,12 +24,16 @@ import ShoppingPage from '../02-component-patterns/pages/ShoppingPage';
               <li>
                 <NavLink to="/users" className={({isActive}) => (`${isActive ? 'nav-active' : ''}`)} >Users</NavLink>
               </li>
+              <li>
+                <NavLink to="/forms" className={({isActive}) => (`${isActive ? 'nav-active' : ''}`)} >Forms</NavLink>
+              </li>
             </ul>
           </nav>
           <Routes>
+            <Route path="/" element={<h1>Mister you can, just do it</h1>}/>
             <Route path="/about"  />
             <Route path="/users" />
-            <Route path="/" element={<ShoppingPage />}/>
+            <Route path="/forms" element={<RegisterPage />} />
           </Routes>
         </div>
       </BrowserRouter>
