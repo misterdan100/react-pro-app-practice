@@ -12,7 +12,7 @@ export function MySelect(props: MySelectProps) {
   return (
     <>
         <label htmlFor={ props.id || name }>{label}</label>
-        <Field type={'select'} className='text-input' {...field} {...restProps}/>
+        <Field as='select' className='text-input' {...field} {...restProps}/>
         <ErrorMessage name={name} component='span'/>
         {/* {
             meta.touched && meta.error && (

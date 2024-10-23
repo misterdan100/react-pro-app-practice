@@ -22,5 +22,5 @@ export function MyTextInput(props: MyTextINputProps) {
         )
       } */}
     </>
-  );
+  )
 }
